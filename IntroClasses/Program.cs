@@ -16,8 +16,8 @@ public class Program
         bool isPlaying = true;
         Vector2 startingPosition = new Vector2(4, 2);
         Character hero = new Player(startingPosition, directions);
-        startingPosition.X = 0;
-        startingPosition.Y = 0;
+        startingPosition.X = 1;
+        startingPosition.Y = 1;
         // startingPosition = new Vector2(0, 0);
         Character anotherHero = new Npc(startingPosition);
         List<Character> characters = [hero, anotherHero];
