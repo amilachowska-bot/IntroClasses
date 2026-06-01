@@ -3,10 +3,11 @@ namespace IntroClasses;
 public abstract class Character
 {
     protected Vector2 _position = new Vector2(0, 0);
-    private string _avatar = "@";
+    private char _avatar = '@';
 
-    public Character(Vector2 startingPosition, Map map)
+    public Character(char avatar, Vector2 startingPosition, Map map)
     {
+        _avatar = avatar;
         _position = startingPosition;
         Cell cell = map.GetCell(_position.X, _position.Y);
         cell.Occupant = this;

@@ -16,11 +16,11 @@ public class Program
         
         bool isPlaying = true;
         Vector2 startingPosition = new Vector2(4, 2);
-        Character hero = new Player(startingPosition, map, directions);
+        Character hero = new Player('@', startingPosition, map, directions);
         startingPosition.X = 1;
         startingPosition.Y = 1;
         // startingPosition = new Vector2(0, 0);
-        Character anotherHero = new Npc(startingPosition, map);
+        Character anotherHero = new Npc('$', startingPosition, map);
         List<Character> characters = [hero, anotherHero];
 
         map.Display();

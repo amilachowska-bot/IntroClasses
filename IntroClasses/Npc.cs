@@ -8,7 +8,7 @@ public class Npc : Character
         new Vector2(0, -1), // w górę
         new Vector2(0, 1) // w dół
     ];
-    public Npc(Vector2 startingPosition, Map map) : base(startingPosition, map)
+    public Npc(char avatar, Vector2 startingPosition, Map map) : base(avatar, startingPosition, map)
     {
         
     }
