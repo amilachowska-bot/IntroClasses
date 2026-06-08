@@ -1,22 +1,11 @@
 namespace IntroClasses;
 
-public abstract class Character
+public abstract class Character : GameObject
 {
-    protected Vector2 _position = new Vector2(0, 0);
-    private char _avatar = '@';
-
-    public Character(char avatar, Vector2 startingPosition, Map map)
+    public Character(char avatar, Vector2 startingPosition, Map map) : base(avatar, startingPosition)
     {
-        _avatar = avatar;
-        _position = startingPosition;
         Cell cell = map.GetCell(_position.X, _position.Y);
         cell.Occupant = this;
-    }
-
-    public void Display()
-    {
-        Console.SetCursorPosition(_position.X, _position.Y);
-        Console.Write(_avatar);
     }
 
     public bool Move(Vector2 direction, Map map)
